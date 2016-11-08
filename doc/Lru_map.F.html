@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <link rel="Start" href="index.html">
-<link rel="previous" href="Lru_map.M.html">
+<link rel="next" href="Lru_map.M.html">
 <link rel="Up" href="Lru_map.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
 <link title="Index of values" rel=Appendix href="index_values.html">
@@ -13,9 +13,9 @@
 <link title="Lru_map" rel="Chapter" href="Lru_map.html"><title>Lru_map.F</title>
 </head>
 <body>
-<div class="navbar"><a class="pre" href="Lru_map.M.html" title="Lru_map.M">Previous</a>
-&nbsp;<a class="up" href="Lru_map.html" title="Lru_map">Up</a>
-&nbsp;</div>
+<div class="navbar">&nbsp;<a class="up" href="Lru_map.html" title="Lru_map">Up</a>
+&nbsp;<a class="post" href="Lru_map.M.html" title="Lru_map.M">Next</a>
+</div>
 <h1>Module <a href="type_Lru_map.F.html">Lru_map.F</a></h1>
 
 <pre><span class="keyword">module</span> F: <code class="code"><span class="keyword">sig</span></code> <a href="Lru_map.F.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
@@ -26,13 +26,13 @@
 <p>
 
     <b>Note</b> The current implementation is backed by a simple non-balancing
-    tree, and suffers from the <code class="code"><span class="constructor">O</span>(n^2)</code> pathological behavior these trees suffer
+    tree, and suffers from the <code class="code"><span class="constructor">O</span>(n)</code> pathological behavior these trees suffer
     from, if the mappings are inserted, <em>or accessed</em>, in key-order.<br>
 </div>
 <hr width="100%">
 
 <pre><span class="keyword">module type</span> <a href="Lru_map.F.S.html">S</a> = <code class="code"><span class="keyword">sig</span></code> <a href="Lru_map.F.S.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
 <pre><span class="keyword">module</span> <a href="Lru_map.F.Make.html">Make</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">K</span></code><code class="code"> : </code><code class="type">Map.OrderedType</code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="type"><a href="Lru_map.F.S.html">S</a></code><code class="type">  with type k = K.t</code></div></pre><div class="info">
-<code class="code"><span class="constructor">Make</span> (<span class="constructor">T</span>)</code> produces a map specialized to <code class="code"><span class="constructor">T</span></code>.
+<code class="code"><span class="constructor">Make</span> (<span class="constructor">T</span>)</code> is a <a href="Lru_map.F.S.html">map</a> specialized to <code class="code"><span class="constructor">T</span></code>.
 </div>
 </body></html>
